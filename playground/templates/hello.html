@@ -4,6 +4,32 @@
     <h1>Hello {{ name }}</h1>
     {% else %}
     <h1>Hello World</h1>
-    {% endif %}
+    <!-- {% endif %} {{ result }} -->
+    <!-- <h1>{{ product.title }}</h1> -->
+    <ul>
+      {% for product in products%}
+      <li>{{ product.title}} - {{ product.collection.title }}</li>
+      {% endfor%}
+    </ul>
+    <ul>
+      {% for order in orders%}
+      <li>{{ order.id}} - {{ order.customer.first_name}}</li>
+      {% endfor%}
+    </ul>
+    <ul>
+      {% for product in products %}
+      <li>{{ product }}</li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for query in result %}
+      <li>{{ query.title }}</li>
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for order in ordered_items %}
+      <li>{{ order.title }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>
